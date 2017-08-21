@@ -22,7 +22,7 @@ var articles{
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     </p>`
-};
+},
     article-two : {
     title:'Article Two | Shreeghanesh',
     heading:'Article One',
@@ -39,7 +39,7 @@ var articles{
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     </p>`
-};
+},
     article-three : {
     title:'Article One | Shreeghanesh',
     heading:'Article Three',
@@ -56,7 +56,7 @@ var articles{
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     </p>`
-};
+}
 };
 function createTemplate(data){
     var title= data.title;

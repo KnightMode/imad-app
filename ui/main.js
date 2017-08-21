@@ -10,7 +10,7 @@ var img = document.getElementById('pic');
 // }
 // var interval = setInterval(moveleft,100);
 img.onclick = function(){
-    img.style.marginLeft='100px';
+    img.style.marginRight='100px';
     // var interval = setInterval(moveleft,100);
    
 };

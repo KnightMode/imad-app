@@ -58,7 +58,7 @@ var articles = {
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     </p>`
 
-};
+}
 }
 function createTemplate(data){
     var title= data.title;

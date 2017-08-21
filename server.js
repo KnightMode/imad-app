@@ -15,12 +15,12 @@ app.get('/article-one',function (req,res){
 );
 
 app.get('/articletwo',function (req,res){
-    res.send('You have requested for Article two');
+     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 }
 );
 
 app.get('/articlethree',function (req,res){
-    res.send('You have requested for Article three');
+    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 }
 );
 

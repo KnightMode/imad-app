@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles{
+    articleOne : {
     title:'Article One | Shreeghanesh',
     heading:'Article One',
     date:'21 August 2017',
@@ -22,7 +23,41 @@ var articleOne = {
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     </p>`
 };
-
+    articleTwo : {
+    title:'Article Two | Shreeghanesh',
+    heading:'Article One',
+    date:'22 August 2017',
+    content:`       <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>
+                    <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>
+                    <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>`
+};
+    articleThree : {
+    title:'Article One | Shreeghanesh',
+    heading:'Article Three',
+    date:'21 August 2017',
+    content:`       <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>
+                    <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>
+                    <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>`
+};
+}
 function createTemplate(data){
     var title= data.title;
     var heading = data.heading;
@@ -60,22 +95,15 @@ var htmltemplate = `<html>
 `;
 return htmltemplate;}
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+app.get('/:articleName', function (req, res) {
+    var articleName=req.params.articleName;//to extract article name this is provided by the express framework
+  res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-one',function (req,res){
-   res.send(createTemplate(articleOne));
+
 }
 );
 
-app.get('/articletwo',function (req,res){
-     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-}
-);
-
-app.get('/articlethree',function (req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 }
 );
 

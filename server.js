@@ -57,13 +57,13 @@ var articles{
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     </p>`
 };
-}
+};
 function createTemplate(data){
     var title= data.title;
     var heading = data.heading;
     var date= data.date;
     var body=data.content;
-var htmltemplate = `<html>
+    var htmltemplate = `<html>
     <head>
         <title>
             ARTICLE ONE | SHREEGHANESH
@@ -91,21 +91,15 @@ var htmltemplate = `<html>
                 </div>
         </div>    
     </body>
-</html>
-`;
+    </html>
+    `;
 return htmltemplate;}
 
-app.get('/:articleName', function (req, res) {
+    app.get('/:articleName', function (req, res) {
     var articleName=req.params.articleName;//to extract article name this is provided by the express framework
-  res.send(createTemplate(articles[articleName]));
-});
+    res.send(createTemplate(articles[articleName]));
+    });
 
-
-}
-);
-
-}
-);
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

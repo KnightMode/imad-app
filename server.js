@@ -40,6 +40,24 @@ var articles = {
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     This is the content of my Article This is the content of my Article This is the content of my Article
                     </p>`
+},
+    'article-three' : {
+    title:'Article One | Shreeghanesh',
+    heading:'Article Three',
+    date:'21 August 2017',
+    content:`       <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>
+                    <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>
+                    <p>
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    This is the content of my Article This is the content of my Article This is the content of my Article
+                    </p>`
+
 }
      
 };

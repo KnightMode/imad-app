@@ -17,7 +17,7 @@ console.log('Loaded!');
 var button = document.getElementById('counter');
 button.onclick = function () {
     //Create a req. object
-    var request= new XMLHTTPRequest();
+    var request= new XMLHttpRequest();
     req.onreadystatechange = function (){
         //check current state of req object and if thats equal to done
         if (request.ReadyState === XMLHttpRequest.DONE)
